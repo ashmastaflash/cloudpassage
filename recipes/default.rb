@@ -8,7 +8,7 @@
 case node[:platform]
     when "debian", "ubuntu"
         #add CloudPassage repository
-        command_add_repo = "echo 'deb http://packages.cloudpassage.com/#{node[:cloudpassage][:repository_key]}/debian debian main' | sudo tee /etc/apt/sources.list.d/cloudpassage.list > /dev/null"
+        command_add_repo = "echo 'deb http://packages.cloudpassage.com/debian debian main' | sudo tee /etc/apt/sources.list.d/cloudpassage.list > /dev/null"
 
         #install curl
         package "curl" do
@@ -23,7 +23,7 @@ case node[:platform]
         command_update_repos = "sudo apt-get update"
     when "redhat", "centos", "fedora", "scientific", "amazon"
         #add CloudPassage repository
-        command_add_repo = "echo '[cloudpassage]\nname=CloudPassage production\nbaseurl=http://packages.cloudpassage.com/#{node[:cloudpassage][:repository_key]}/redhat/$basearch\ngpgcheck=1' | sudo tee /etc/yum.repos.d/cloudpassage.repo > /dev/null"
+        command_add_repo = "echo '[cloudpassage]\nname=CloudPassage production\nbaseurl=http://packages.cloudpassage.com/redhat/$basearch\ngpgcheck=1' | sudo tee /etc/yum.repos.d/cloudpassage.repo > /dev/null"
 
         #import CloudPassage public key
         command_import = "sudo rpm --import http://packages.cloudpassage.com/cloudpassage.packages.key"

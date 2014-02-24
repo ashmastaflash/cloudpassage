@@ -4,7 +4,7 @@ Description
 This cookbook provides an easy way to install CloudPassage/Halo.
 
 More information?
-http://cloudpassage.com/features/
+http://cloudpassage.com/product/
 
 Requirements
 ============
@@ -26,7 +26,6 @@ This cookbook doesn't have direct dependencies on other cookbooks.
 Attributes
 ==========
 
-* `node['cloudpassage']['repository_key']` - The CloudPassage repository key, defaults to "4e750694a24da434d6fdf0bf271ad361"
 * `node['cloudpassage']['license_key']` - Your CloudPassage license key.
 
 Usage
@@ -42,7 +41,7 @@ References
 ==========
 
 * [CloudPassage home page] (http://cloudpassage.com/)
-* [CloudPassage features] (http://cloudpassage.com/features/)
+* [CloudPassage features] (http://cloudpassage.com/product/)
 
 License and Authors
 ===================
